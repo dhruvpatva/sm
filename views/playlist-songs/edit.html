@@ -1,0 +1,62 @@
+<ul class="page-breadcrumb breadcrumb">
+        <li>
+                <i class="fa fa-home"></i>
+                <a ui-sref="dashboard" >Home</a>
+                <i class="fa fa-angle-right"></i>
+        </li>
+        <li><a href="javascript:void(0);">Edit Playlist Songs</a></li>
+</ul>
+<div class="form">
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light portlet-fit portlet-form bordered"  ng-init="edit_PlaylistSongs()" >
+        <div class="portlet-title">
+                <div class="caption">
+                        Edit Playlist Songs
+                </div>
+        </div>
+        <div class="portlet-body"> 
+             <div class="alert alert-danger show-error" ng-show="error"> <strong>Error! </strong>{{error_code}} </div>
+               <form class="form-horizontal form-bordered"   method="post"  enctype="multipart/form-data" ng-submit="Update_PlaylistSongs()" >
+                       <div class="form-body">
+                                <input type="hidden" name="id" ng-model="playlistsongs.id" value="{{playlistsongs.id}}" />
+                                <div class="form-group">
+                                         <label class="col-sm-3 control-label">Playlist Title</label> 
+                                         <div class="col-sm-4" >
+                                                 <select class="form-control select2" id="playlist" name="playlist"  ng-options="option.name for option in playlists.availableOptions track by option.id" ng-model="playlists.selectedOption" required ></select>
+                                         </div>
+                                </div>
+                                <div class="form-group">
+                                         <label class="col-sm-3 control-label">Source</label>
+                                         <div class="col-sm-4">
+                                                 <select class="form-control select2" id="sources" name="sources"  ng-options="option.name for option in sources.availableOptions track by option.id" ng-model="sources.selectedOption" required ></select>
+                                         </div>
+                                </div>
+                                <div class="form-group">
+                                         <label class="col-sm-3 control-label">Song Info</label>
+                                         <div class="col-sm-4">
+                                                 <textarea  name="song_info" class="form-control" ng-model="playlistsongs.song_info" >{{playlistsongs.song_info}} </textarea>
+                                         </div>
+                                </div>
+                                <div class="form-group">
+                                         <label class="col-sm-3 control-label">Status</label>
+                                         <div class="col-sm-4">
+                                                 <div class="radio-list">
+                                                         <label class="radio-inline"><input type="radio" name="status" ng-model="playlistsongs.status"  value="1" > Active </input> </label> 
+                                                         <label class="radio-inline"><input type="radio" name="status"  ng-model="playlistsongs.status" value="2" > Inactive</input> </label>
+                                                         <label class="radio-inline"><input type="radio" name="status"  ng-model="playlistsongs.status" value="4" > Blocked</input> </label>
+                                                 </div>
+                                         </div>
+                                </div>
+                       </div>
+                      <div class="form-actions">
+                         <div class="row">
+                             <div class="col-md-offset-3 col-md-9">
+                                 <button type="submit" class="btn green"  id="add-new-btn" >Submit</button>
+                                 <a class="btn default" href="#/playlists/playlist-songs/{{playlistsongs.playlist_id}}" >Cancel</a>
+                             </div>
+                         </div>
+                     </div>
+               </form>
+        </div>
+</div>
+</div>

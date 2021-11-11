@@ -1,0 +1,166 @@
+/*body {
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
+
+.tree-dropdown {
+   position: relative;
+   display: block;
+   font-size: 13px;
+   width: 491px;
+}
+.tree-dropdown.form-control{
+    /*padding: 0px;*/
+    cursor: pointer;
+    padding: 0px !important;
+    
+}
+.tree-dropdown .select {
+   /*padding: 0 10px;*/
+   height: 32px;
+   display: block;
+   line-height: 14px;
+   color: #333333;
+   border-radius: 4px;
+   vertical-align: middle;
+   /*padding: 2px;*/
+   padding: 8px 12px;
+   /*background-color: #ffffff;*/
+  
+   /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;*/  
+   /* http://www.lugolabs.com/caret */
+}
+.tree-dropdown .select::after{
+    border: 1px solid #e5e5e5;
+    display: block;
+}
+
+.tree-dropdown .select::after {
+   /*content: "\f107";
+   /*width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-top: 5px solid #CDCDCD;
+   position: absolute;
+   font-family: FontAwesome;
+   /*right: 10px;
+   top: 13px;
+   color:red;
+   right: 4px;
+    top: 10px;
+    font-size: 16px;
+    
+   */ 
+   
+    content: "\f107";
+    position: absolute;
+    font-family: FontAwesome;
+    color: red;
+    right: 0px;
+    top: 0;
+    font-size: 16px;
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    height: auto;
+    padding: 9px 3px;
+    
+    
+}
+.tree-dropdown ul li p{
+    padding: 5px;
+    font-size: 13px;
+}
+.tree-dropdown p {
+   line-height: 15px;
+   margin: 0;
+}
+
+.tree-dropdown .list{
+   box-sizing: content-box;
+   position: absolute;
+   top: 33px;
+   left: 0px;
+   right: 0px;
+   background-color: #FFF;
+   /*border-style: solid;
+   border-color: #cccccc;
+   border-width: 0px 1px 1px 1px;*/
+   border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+   z-index: 1100;
+   border-radius: 4px;
+   overflow-x: hidden;
+   max-height: 300px;
+   border: 1px solid #999;
+   border-top: 0;
+   /*-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);*/
+}
+.tree-dropdown-box{
+    border: 1px solid rgb(153, 153, 153) !important;
+    border-bottom: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.tree-dropdown-list{
+    margin: -1px;
+    top: 32px;
+}
+
+
+.tree-dropdown ul {
+   list-style-type: none;
+   padding: 0px;
+   margin: 0px;
+}
+
+.tree-dropdown ul:first-child { 
+   padding: 0px;
+}
+
+.tree-dropdown .list p:hover{
+   background: #eee;
+}
+
+.tree-dropdown .list p.selected{
+   background: #eee;
+}
+
+.tree-dropdown .level-0 {
+   padding-left: 15px !important;
+}
+.tree-dropdown .level-1 {
+   padding-left: 30px !important;
+}
+.tree-dropdown .level-2 {
+   padding-left: 45px !important;
+}
+.tree-dropdown .level-3 {
+   padding-left: 60px !important;
+}
+.tree-dropdown .level-4 {
+   padding-left: 75px !important;
+}
+.tree-dropdown .level-5 {
+   padding-left: 90px !important;
+}
+.tree-dropdown .level-6 {
+   padding-left: 105px !important;
+}
+.tree-dropdown .level-7 {
+   padding-left: 120px !important;
+}
+.tree-dropdown .level-8 {
+   padding-left: 135px !important;
+}
+.tree-dropdown .level-9 {
+   padding-left: 150px !important;
+}
+.tree-dropdown .level-10 {
+   padding-left: 110px !important;
+}
